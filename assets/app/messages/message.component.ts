@@ -23,7 +23,7 @@ import { Message } from './message.model';
 export class MessageComponent {
     @Input('inputMessage') message: Message;
     @Output() editClicked = new EventEmitter<string>();
-
+    
     onEdit() {
         this.editClicked.emit('A new value');
     }
