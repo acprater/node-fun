@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
+import { MessageService } from './message.service';
 import { Message } from './message.model';
 
 @Component({
@@ -13,10 +14,14 @@ import { Message } from './message.model';
         </div>
     `
 })
-export class MessageListComponent {
-    messages: Message[] = [
-        new Message('Some Message', 'Charlie'),
-        new Message('Some Message 2', 'Charlie'),
-        new Message('3rd one', 'Charlie')
-    ];
+export class MessageListComponent implements OnInit {
+    messages: Message[];
+
+    constructor(private messageService: MessageService){}
+
+    ngOnInit() {
+        //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+        //Add 'implements OnInit' to the class.
+        this.messages = this.messageService.getMessages();
+    }
 }
