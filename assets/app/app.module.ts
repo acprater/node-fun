@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms";
 
+import { routing } from './app.routing';
 import { HeaderComponent } from './header.component';
 import { AppComponent } from "./app.component";
 import { AuthenticationComponent } from './auth/authentication.component';
@@ -20,7 +21,7 @@ import { MessagesComponent } from './messages/messages-component';
         AuthenticationComponent,
         HeaderComponent
     ],
-    imports: [BrowserModule, FormsModule],
+    imports: [BrowserModule, FormsModule, routing],
     bootstrap: [AppComponent]
 })
 export class AppModule {
