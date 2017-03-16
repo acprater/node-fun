@@ -24,5 +24,4 @@ export class SignupComponent implements OnInt {
             password: new FormControl(null, Validators.required)
         })
     }
-
 }
