@@ -3,13 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms";
 
 import { routing } from './app.routing';
-import { HeaderComponent } from './header.component';
 import { AppComponent } from "./app.component";
+
 import { AuthenticationComponent } from './auth/authentication.component';
+import { HeaderComponent } from './header.component';
+import { LogoutComponent } from './auth/logout.component';
 import { MessageComponent } from "./messages/message.component";
 import { MessageListComponent } from './messages/message-list.component';
 import { MessageInputComponent } from './messages/message-input.component';
 import { MessagesComponent } from './messages/messages-component';
+import { SigninComponent } from './auth/signin.component';
+import { SignupComponent } from './auth/signup.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +23,10 @@ import { MessagesComponent } from './messages/messages-component';
         MessageInputComponent,
         MessagesComponent,
         AuthenticationComponent,
-        HeaderComponent
+        HeaderComponent,
+        LogoutComponent,
+        SigninComponent,
+        SignupComponent
     ],
     imports: [BrowserModule, FormsModule, routing],
     bootstrap: [AppComponent]
