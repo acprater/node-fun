@@ -9,7 +9,6 @@ import { Message } from './message.model';
         <div class="col-md-8 col-md-offset-2">
             <app-message
                 [inputMessage]="message"
-                (editClicked)="message.content = $event"
                 *ngFor="let message of messages"></app-message>
         </div>
     `
