@@ -11,5 +11,13 @@ cd '.\Program Files\MongoDB\Server\3.4\bin'
 .\mongod.exe --dbpath c:\dev\data
 
 //mongo to run ./mongo.exe
-> use node-angular
-> db.users.find()
+cd '.\Program Files\MongoDB\Server\3.4\bin'
+.\mongo.exe
+
+    // to lookup users
+    use node-angular
+    db.users.find()
+
+    //to lookup messages:
+    use node-angular
+    db.messages.find()

@@ -5,7 +5,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
     selector: 'app-signup',
     templateUrl: './signup.component.html'
 })
-export class SignupComponent implements OnInt {
+export class SignupComponent implements OnInit {
     myForm: FormGroup;
 
     onSubmit() {
