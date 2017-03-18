@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from "@angular/forms";
 import { HttpModule } from '@angular/http';
 
 import { routing } from './app.routing';
 import { AppComponent } from "./app.component";
 import { AuthenticationComponent } from './auth/authentication.component';
 import { HeaderComponent } from './header.component';
-import { LogoutComponent } from './auth/logout.component';
-import { SigninComponent } from './auth/signin.component';
-import { SignupComponent } from './auth/signup.component';
 import { AuthService } from "./auth/auth.service";
 import { ErrorComponent } from "./errors/error.component";
 import { ErrorService } from "./errors/error.service";
@@ -21,15 +17,11 @@ import { MessageModule } from './messages/message.module';
         AppComponent,
         AuthenticationComponent,
         HeaderComponent,
-        LogoutComponent,
-        SigninComponent,
-        SignupComponent,
         ErrorComponent
     ],
     imports: [
-        BrowserModule, 
-        routing, 
-        ReactiveFormsModule,
+        BrowserModule,
+        routing,
         HttpModule,
         MessageModule
     ],
