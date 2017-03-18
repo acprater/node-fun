@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 
 var appRoutes = require('./routes/app');
 var messageRoutes = require('./routes/messages');
-var appRoutes = require('./routes/app');
+var userRoutes = require('./routes/user');
 
 var app = express();
 mongoose.connect('localhost:27017/node-angular');
@@ -33,6 +33,7 @@ app.use(function (req, res, next) {
 });
 
 app.use('/message', messageRoutes); //order matters here.  This must be before generic
+app.use('/user', userRoutes);
 app.use('/', appRoutes);
 
 // catch 404 and forward to error handler - this must be done to let Angular do the routing
