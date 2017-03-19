@@ -18,6 +18,7 @@ export var MessageService = (function () {
         var token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
+        //return this.http.post('http://localhost:3000/message' + token, body, {headers: headers})
         return this.http.post('https://mean-prater.herokuapp.com/message' + token, body, { headers: headers })
             .map(function (response) {
             var result = response.json();
@@ -32,6 +33,7 @@ export var MessageService = (function () {
     };
     MessageService.prototype.getMessages = function () {
         var _this = this;
+        //return this.http.get('http://localhost:3000/message')
         return this.http.get('https://mean-prater.herokuapp.com/message')
             .map(function (response) {
             var messages = response.json().obj;
@@ -59,6 +61,7 @@ export var MessageService = (function () {
         var token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
+        //return this.http.patch('http://localhost:3000/message/' + message.messageId + token, body, {headers: headers})
         return this.http.patch('https://mean-prater.herokuapp.com/message/' + message.messageId + token, body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) {
@@ -72,6 +75,7 @@ export var MessageService = (function () {
         var token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
+        //return this.http.delete('http://localhost:3000/message/' + message.messageId + token)
         return this.http.delete('https://mean-prater.herokuapp.com/message/' + message.messageId + token)
             .map(function (response) { return response.json(); })
             .catch(function (error) {

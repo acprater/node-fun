@@ -23,4 +23,5 @@ cd '.\Program Files\MongoDB\Server\3.4\bin'
     db.messages.find()
 
 //prod deploy:
-npm run build:prod
+
+        //npm run build:prod
