@@ -59,7 +59,7 @@ export var MessageService = (function () {
         var token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-        return this.http.patch('https://mean-prater.herokuapp.com//message/' + message.messageId + token, body, { headers: headers })
+        return this.http.patch('https://mean-prater.herokuapp.com/message/' + message.messageId + token, body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) {
             _this.errorService.handleError(error.json());
