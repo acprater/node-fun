@@ -13,7 +13,7 @@ export var AuthService = (function () {
         var body = JSON.stringify(user);
         var headers = new Headers({ 'Content-Type': 'application/json' });
         //return this.http.post('http://localhost:3000/user', body, {headers: headers})
-        return this.http.post('https://mean-prater.herokuapp.com/message/user', body, { headers: headers })
+        return this.http.post('https://mean-prater.herokuapp.com/user', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) {
             _this.errorService.handleError(error.json());
@@ -25,7 +25,7 @@ export var AuthService = (function () {
         var body = JSON.stringify(user);
         var headers = new Headers({ 'Content-Type': 'application/json' });
         //return this.http.post('http://localhost:3000/user/signin', body, {headers: headers})
-        return this.http.post('https://mean-prater.herokuapp.com/message/user/signin', body, { headers: headers })
+        return this.http.post('https://mean-prater.herokuapp.com/user/signin', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) {
             _this.errorService.handleError(error.json());
